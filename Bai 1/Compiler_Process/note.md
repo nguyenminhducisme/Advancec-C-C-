@@ -1,5 +1,5 @@
 # Author: Nguyen Minh Duc
-# Email : minhducnguyen1205@gmail.com
+# Email : minhnguyenduc1205@gmail.com
 
 
 # Compiler process
