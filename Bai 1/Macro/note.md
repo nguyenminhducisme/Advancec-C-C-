@@ -1,7 +1,8 @@
 # Macro
-1. #include
- <>: Dùng cho các thư viện chuẩn của C/C++
- "": Tìm các file ở thư mục hiện tại đang làm việc do bản thân viết ra
+1. #include: đây là chỉ thị dùng để khai báo 1 file nguồn đã được viết sẵn, ta s4 khai báo chỉ thị này cùng với tên của file mà ta cần thêm vào chương trình chính.
++ __#include" "__ : khi file nguồn của chúng ta đặt trong " ", thì chạy chương trình, hệ thống sẽ tìm trong folder của project hiện tại có file đó không và thay thế vào chương trình
+
++ __#include <>__ : trong trường hợp này thì hệ thống sẽ tìm trong thư mục cài đặt gốc ở bất kỳ đâu trong máy tính để lấy ra file đó
 2. #define: Dùng để thay thế một cái gì đó
 3. ##: nối chuỗi
 4. #: chuẩn hóa văn bản lên chuỗi để xử lí
