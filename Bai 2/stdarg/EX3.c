@@ -1,22 +1,36 @@
 #include<stdio.h>
 #include<stdarg.h>
 
-#define tong(...) sum(__VA_ARGS__,'a')
+typedef enum sensor{ //enum: kieu liet ke
+    temperature_sensor,
+    pressure_sensor
+}sensor;
 
-int sum(int count,...){
-    va_list args;
-    va_list args1;
-    va_start(args, count);
-    va_copy(args1, args); // copy all the data of args into args1
-    int result = count;
+void SENSOR_DATA(sensor type,...){
+    va_list parameter;
+    va_start(parameter, type);
+    
+    switch(type){
+        case(temperature_sensor):
+        {
+            int numArgs= va_arg(parameter, int);
+            int sensorID= va_arg(parameter, int);
+            int temperature= va_arg(parameter, int);
+            printf("Temperature sensor ID: %d\nTemperature: %d\n", sensorID, temperature);
+            break;
+        }
+        case(pressure_sensor): 
+        {
+            int numArgs= va_arg(parameter, int);
+            int sensorID= va_arg(parameter, int);
+            int pressure= va_arg(parameter, int);
+            printf("Pressure sensor ID: %d\nPressure: %d", sensorID, pressure);
+            break;
+        }
+    }
 
-    while((va_arg(args1,char*))!=(char*)'a'){
-        result+= va_arg(args,int);
-    } 
-    va_end(args);
-    return result;
 }
 int main(){
-    printf("%d",tong(3,1,2,0,0,5,7));
-    return 0;
+    SENSOR_DATA(temperature_sensor, 2, 1234, 36);
+    SENSOR_DATA(pressure_sensor, 2, 1543, 56);
 }
