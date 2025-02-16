@@ -1,21 +1,21 @@
 # BIT MASK
 
 - Nếu khai báo kiểu như sau:
-int gender; nam = 0, nữ = 1
-int status; 0/1
-int option1; 0/1   
-int option2; 0/1
-int option3; 0/1
-int option4; 0/1
-__+ CHIẾM TỚI 24 BYTES__
++ int gender; nam = 0, nữ = 1
++ int status; 0/1
++ int option1; 0/1   
++ int option2; 0/1
++ int option3; 0/1
++ int option4; 0/1
+* Chiem toi 24 bytes
 __+ Giá trị của int chạy từ 0->2^32-1, trong khi đó ta chỉ cần 2 giá trị 0 và 1
  * NÊN CÓ THỂ KHAI BÁO KIỂU SAU ĐÂY ĐỂ TIẾT KIỆM BỘ NHỚ
-int8_t, uint8_t,...
-uint8_t status; 0/1
-uint8_t option1; 0/1   
-uint8_t option2; 0/1
-uint8_t option3; 0/1
-uint8_t option4; 0/1
++ int8_t, uint8_t,...
++ uint8_t status; 0/1
++ uint8_t option1; 0/1   
++ uint8_t option2; 0/1
++ uint8_t option3; 0/1
++ uint8_t option4; 0/1
 __+ CÒN 6 BYTES__
 ## VẪN CHƯA TỐI ƯU ?
 
