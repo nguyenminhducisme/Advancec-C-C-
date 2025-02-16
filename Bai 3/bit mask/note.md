@@ -31,16 +31,16 @@ __+ XOR__ : ^
 __+ Shift left__ : <<   
 __+ Shift right__: >>
 
-uint8_t user1 = 0b00001110;
-uint8_t user2 = 0b10101001;
+- uint8_t user1 = 0b00001110;
+- uint8_t user2 = 0b10101001;
 
-user1 = ~ user1; // 0b11110001;
-user2 = ~ user2; // 0b01010110;
+- user1 = ~ user1; // 0b11110001;
+- user2 = ~ user2; // 0b01010110;
 
-user1 & user2 = 0b00001000;
-user1 | user2 = 0b10101110;
-user1 ^ user2 = 0b10100111;
+- user1 & user2 = 0b00001000;
+- user1 | user2 = 0b10101110;
+- user1 ^ user2 = 0b10100111;
 
-user1 >> 1 = 0b00000111;
-user1 >> 5 = 0b00000000;
-user1 << 6 = 0b10000000;
+- user1 >> 1 = 0b00000111;
+- user1 >> 5 = 0b00000000;
+- user1 << 6 = 0b10000000;
