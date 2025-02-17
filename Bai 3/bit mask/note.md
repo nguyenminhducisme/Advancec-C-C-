@@ -16,7 +16,7 @@ __+ Giá trị của int chạy từ 0->2^32-1, trong khi đó ta chỉ cần 2 
 + uint8_t option2; 0/1
 + uint8_t option3; 0/1
 + uint8_t option4; 0/1
-__+ CÒN 6 BYTES__
+ ?? CÒN 6 BYTES ??
 ## VẪN CHƯA TỐI ƯU ?
 
 # Bitmask definition:
