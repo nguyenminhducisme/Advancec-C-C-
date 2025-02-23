@@ -23,3 +23,23 @@ warning: 'display' used but never defined
  undefined reference to `display'
 ```
 - Ứng dụng: Dùng để thiết kế các file thư viện.
+
+# VOLATILE
+- Dùng để báo hiệu cho tình biên dịch rằng 1 biến có thể thay đổi ngẫu nhiên, ngoài sự kiểm soát của chương trình. Việc này ngăn chặn trình biên dịch tối ưu hóa hoặc xóa bỏ các thao tác trên biến đó, giữ cho các thao tác trên biến được thực hiện như đã định nghĩa. 
+- Giả dụ có 1 biến sau nhiều lần chạy mà mình không động tới nó thì trình biên dịch sẽ tự động xóa đi, kể cả mình có cập nhật lại bằng cách gán giá trị cho nó hay bất kì cách gì thì cũng không có tác dụng.
+
+# REGISTER
+- Chỉ ra ý muốn rằng muốn lưu biến ở trong thanh ghi của CPU chứ không phải trong bộ nhớ RAM. Việc này nhằm tăng tốc độ truy cập và xử lí. 
+- Chỉ sử dụng cho biến cục bộ, không thể khai báo biến register global vì nó sẽ bị chiếm dụng xuyên suốt chương trình, nên nhà sx đã ngăn chặn việc này bằng cách không cho phép khai báo như vậy.
+------------------------------------------------------------------------------------
+|   ALU                    2        Register        1                RAM            |
+|Arithmetic Logic        <===      R1 = 6        <===               int i = 5;      |
+|    Unit                ===>      R2 = +1       ===>                 ++i;          |
+|                          3          ...          4                 i = 6;         |
+|                                                                                   |
+------------------------------------------------------------------------------------
+
+# So sánh các từ khóa
+
+<p align = "center">
+<img src = "https://github.com/user-attachments/assets/e86cb852-f651-4850-ad37-20508a36e83d" width = "1200" height = "230">
