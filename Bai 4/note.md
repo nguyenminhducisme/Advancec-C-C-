@@ -90,9 +90,3 @@ data_type *ptr_name = NULL;
 
 # Pointer to Pointer
 - Là một kiểu dữ liệu cho phép lưu địa chỉ của 1 con trỏ và thay đổi giá trị của con trỏ đó.
-```c
-int a = 5;
-int *ptr = &a;
-int **ptr_lev2 = &ptr;
-printf("%d\n", **ptr_lev2);  // Output: 5
-```
