@@ -3,7 +3,6 @@
 #include<string.h>
 
 jmp_buf buf;
-char str1[10000], str2[10000];
 int a, b;
 char error_message[50];
 int exception ;
@@ -57,17 +56,13 @@ void calculateData(int a, int b)
 int main()
 {
    
-   fgets(str1, sizeof(str1), stdin);
-   str1[strlen(str1)-1]='\0';
-   fgets(str2, sizeof(str2), stdin);
-   str2[strlen(str2)-1]='\0';
 
    scanf("%d %d", &a, &b);
 
     
     TRY {
-        readFile(str1);
-        networkOperation(str2);
+        readFile("hello");
+        networkOperation("world");
         calculateData(a, b);
     }
     CATCH(FILE_ERROR){
