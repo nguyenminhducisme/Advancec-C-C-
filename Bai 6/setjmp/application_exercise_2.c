@@ -3,7 +3,6 @@
 #include<string.h>
 
 jmp_buf buf;
-int a, b;
 char error_message[50];
 int exception ;
 
@@ -29,41 +28,31 @@ typedef enum{
    copy_message( error_message, #cmd);  \
    longjmp(buf,x);  \
 }
-void readFile( char *str) 
+
+void readFile() 
 {
     printf("Doc file...\n");
-    if(str == NULL)
     THROW(FILE_ERROR, "Loi doc file: File khong ton tai."); // x= 1
-    printf("Doc file thanh cong\n");
 }
 
-void networkOperation(char *str)
+void networkOperation()
 {
     printf("Kiem thu ket noi mang\n");
-    if(str == NULL)
     THROW(NETWORK_ERROR, "Loi mang: Khong chay duoc he thong"); // x=2
-    printf("Ket noi mang thanh cong\n");
 }
 
-void calculateData(int a, int b)
+void calculateData()
 {
     printf("Tinh toan thong so\n");
-    if((a == 0 && b ==0) || (a!=0 && b==0))
     THROW(CALCULATION_ERROR, "Loi tinh toan: He thong khong the tinh toan"); // x=3
-    printf("Tinh toan thanh cong: %.3lf\n", (double)a/b);
 }
 
 int main()
 {
-   
-
-   scanf("%d %d", &a, &b);
-
-    
     TRY {
-        readFile("hello");
-        networkOperation("world");
-        calculateData(a, b);
+        readFile();
+        networkOperation();
+        calculateData();
     }
     CATCH(FILE_ERROR){
     printf("%s\n", error_message); 
