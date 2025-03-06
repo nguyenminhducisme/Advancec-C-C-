@@ -23,7 +23,7 @@ typedef enum{
 }ErrorCodes;
 
 #define TRY if((exception = setjmp(buf)) == 0)
-#define CATCH(x) else if(exception == x) 
+#define CATCH(x)  if(exception == x) 
 #define THROW(x, cmd) { \
    copy_message( error_message, #cmd);  \
    longjmp(buf,x);  \
@@ -50,8 +50,8 @@ void calculateData()
 int main()
 {
     TRY {
-        readFile();
-        networkOperation();
+        // readFile();
+        // networkOperation();
         calculateData();
     }
     CATCH(FILE_ERROR){
