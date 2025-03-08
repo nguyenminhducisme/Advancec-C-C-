@@ -6,12 +6,11 @@ jmp_buf buf;
 
 char error_code[50];
 
+
 #define TRY   if((exception = setjmp(buf)) ==0)
 #define CATCH(x) else if(exception == x)
 #define THROW(x, str) \
-if(x==1)        \
-strcpy( error_code, #str); \
-else if(x == 2)     \
+if(x==1 || x==2)        \
 strcpy( error_code, #str); \
 longjmp(buf,x);   
 
