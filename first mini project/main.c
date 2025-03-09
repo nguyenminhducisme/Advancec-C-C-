@@ -1,3 +1,9 @@
+/*
+* @author: Nguyen Minh Duc
+* @date  : 7/3/2025
+* @details: This file is used to run all tasks
+*/
+
 #include <stdio.h>
 #include "function_handler.h"
 #include "module_manager.h"
