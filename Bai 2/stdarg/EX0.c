@@ -22,7 +22,7 @@ void test(int count,...){ // count: so luong doi so minh truyen vao
 }
 
 int main(){
-    test(5,1,2,6,3.19,"hello"); // count == 5
+    test(5,1,2,6,3.5,"hello"); // count == 5
     return 0;
 }
 

@@ -9,7 +9,6 @@ int sum(int count,...){
     va_start(args, count);
     va_copy(args1, args); // copy all the data of args into args1
     int result = count;
-
     while((va_arg(args1,char*))!=(char*)'a'){
         result+= va_arg(args,int);
     } 
@@ -17,6 +16,6 @@ int sum(int count,...){
     return result;
 }
 int main(){
-    printf("%d",tong(3,1,2,0,0,5,7));
+    printf("%d",tong(3,1,2,3,0,5,7));
     return 0;
 }

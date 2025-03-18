@@ -23,5 +23,6 @@ int main(int argc, char const *argv[])
 
     Data_Frame receive_data;
     strcpy((char*)receive_data.frame, (char*)transmit_data.frame);
+    
     return 0;
 }

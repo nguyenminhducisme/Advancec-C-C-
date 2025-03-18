@@ -24,8 +24,8 @@ typedef uint8_t CarEngine;
 
 
 typedef struct {
-    uint8_t additionalOptions : 3; // 3 bits cho các tùy chọn bổ sung
-    CarColor color : 2; // bit-field    int a = 5 , 0000...101
+    uint8_t additionalOptions : 3; // 3 bits cho các tùy chọn bổ sung   1 2 3 4
+    CarColor color : 2; // bit-field    int a = 5 , 0000...101   1 2 3 4
     CarPower power : 2;                       
     CarEngine engine : 1;               
     

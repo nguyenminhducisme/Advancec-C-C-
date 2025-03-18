@@ -24,7 +24,8 @@ int main(){
     // }
     int x=5;
     int *ptr=&x;
-    printf("%d\n",ptr);
+    *ptr = 10;
+    printf("%p\n",ptr);
     printf("%d\n",*ptr);
 
 

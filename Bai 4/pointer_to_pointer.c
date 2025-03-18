@@ -17,6 +17,9 @@ int main() {
     printf("value of ptr1: %p\n", ptr1);
 
     printf("address of ptr1: %p\n", &ptr1);
+
+    printf("deference ptr1: %d\n", *ptr1);
+
     printf("value of ptr2: %p\n", ptr2);
 
     printf("dereference ptr2 first time: %p\n", *ptr2);

@@ -32,7 +32,7 @@ int main()
 {  
     uint8_t GPIO = 0;
     
-    enableLED(&GPIO, LED1 | LED2); // Turn on led1 and led2
+    enableLED(&GPIO, LED1 | LED2 ); // Turn on led1 and led2
     disableLed(&GPIO, LED1);
     displayActiveLed(GPIO);
 

@@ -5,7 +5,7 @@ int main()
 {
     Result nghiem = {0.0, 0.0};
 
-    nghiem = solve_E2(1, 3, -3);
+    nghiem = solve_E2(1, 0, 0);
     
     return 0;
 }

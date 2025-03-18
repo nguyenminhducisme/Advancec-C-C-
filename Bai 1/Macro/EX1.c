@@ -39,6 +39,6 @@ int main(){
     test1();
     test2();
     CREATE_VAR(hi);
-    sum(1,2,3);
+    sum(1,2,3,4);
     return 0;
 }

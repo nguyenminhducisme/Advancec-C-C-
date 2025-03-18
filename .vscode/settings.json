@@ -60,6 +60,20 @@
     "*.ini": "platformio-debug.asm",
     "stdint.h": "c",
     "stdio.h": "c",
-    "test.h": "c"
+    "test.h": "c",
+    "stdarg.h": "c",
+    "assert.h": "c",
+    "windows.h": "c",
+    "time.h": "c",
+    "setjmp.h": "c",
+    "conio.h": "c",
+    "bitmask_utils.h": "c",
+    "module_manager.h": "c",
+    "stdlib.h": "c",
+    "function_handler.h": "c",
+    "error_handler.h": "c",
+    "queue_linear.h": "c",
+    "*.tcc": "c",
+    "deque": "c"
   }
 }

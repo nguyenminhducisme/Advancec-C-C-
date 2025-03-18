@@ -9,6 +9,10 @@ static double calculate_Delta(int a, int b, int c)
     return b*b - 4*a*c;
 }
 
+static Result tinhtoan(Result(*ptr_func)(int, int, int), int a, int b, int c)
+{
+    return ptr_func(a, b, c);
+}
 
 static Result calculate_variable(int a, int b, int c)
 {
@@ -30,10 +34,7 @@ static Result calculate_variable(int a, int b, int c)
     return nghiem;
 }
 
-static Result tinhtoan(Result(*ptr_func)(int, int, int), int a, int b, int c)
-{
-    return ptr_func(a, b, c);
-}
+
 
 Result solve_E2(int a, int b, int c)
 {

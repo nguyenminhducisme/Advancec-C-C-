@@ -1,11 +1,12 @@
 #ifndef BITMASK_UTILS_H
 #define BITMASK_UTILS_H
 
-
+/* INCLUDE */
 #include<string.h>
 #include<stdio.h>
 #include "module_manager.h"
-#include "stdint.h"
+/*==============================*/
+
 // Bitmask quản lý trạng thái
 #define STATUS_ON        (1 << 0)  // Module đang bật
 #define STATUS_ERROR     (1 << 1)  // Module gặp lỗi

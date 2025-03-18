@@ -2,17 +2,17 @@
 #include <string.h>
 
 typedef struct {
-   char ten[50];
+   char ten[50];  
    float diemTrungBinh;
    int id;
 } SinhVien;
 
 int stringCompare(const char *str1, const char *str2) {
    while (*str1 && (*str1 == *str2)) {
-       str1++;
-       str2++;
+       str1++; // hoang 
+       str2++; // tuan
    }
-   return *(const unsigned char*)str1 - *(const unsigned char*)str2;
+   return *(const unsigned char*)str1 - *(const unsigned char*)str2; // -127 -> 128, 0->255
 }
 
 
@@ -47,7 +47,7 @@ void sort(SinhVien array[], size_t size, int (*compareFunc)(const void *, const 
    int i, j;
    SinhVien temp;
    
-   for (i = 0; i < size-1; i++)    
+   for (i = 0; i < size-1; i++)                       
        for (j = i+1; j < size; j++)
            if (compareFunc(array+i, array+j)>0) {
                temp = array[i];
@@ -65,6 +65,7 @@ void display(SinhVien *array, size_t size) {
 }
 
 int main() {
+
    SinhVien danhSachSV[] = {
        {  
            .ten = "Hoang",
@@ -79,7 +80,8 @@ int main() {
        {
            .ten = "Vy",
            .diemTrungBinh = 6.8,
-           .id = 102},
+           .id = 102
+       },
        {  
            .ten = "Ngan",
            .diemTrungBinh = 5.6,
@@ -102,6 +104,8 @@ int main() {
    sort(danhSachSV, size, compareByID);
 
    display(danhSachSV, size);
+
+   printf("%d", sizeof(danhSachSV));
 
    return 0;
 }
