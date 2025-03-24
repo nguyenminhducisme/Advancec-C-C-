@@ -18,12 +18,12 @@ all: $(TARGET)
 
 # Quy tắc để tạo ra tệp thực thi
 $(TARGET): $(OBJECTS)
-    @echo "Compiling $(TARGET) with objects: $(OBJECTS)"
 	$(CC) $(CFLAGS) -o $@ $^
+	@echo "Compiling $(TARGET) with objects: $(OBJECTS)"
 
 # Quy tắc để biên dịch các tệp .c thành .o
 $(SOURCE_DIR)/%.o: $(SOURCE_DIR)/%.c
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(CFLAGS) -c -o $@ $^
 
 # Quy tắc để làm sạch thư mục build
 clean:
