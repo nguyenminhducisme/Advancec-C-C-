@@ -1,4 +1,4 @@
-#include "../inc/stack.h"
+#include "..//Header//stack.h"
 
 // hàm khởi tạo stack
 void stack_init(Stack *stack, int newSize)

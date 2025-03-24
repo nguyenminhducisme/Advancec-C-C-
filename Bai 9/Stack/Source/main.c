@@ -1,6 +1,5 @@
 #include<stdio.h>
-#include "../inc/stack.h"
-
+#include "..//Header//stack.h"
 int main()
 {
     Stack stack;

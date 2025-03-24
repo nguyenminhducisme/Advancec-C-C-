@@ -1,13 +1,13 @@
 # Tên của chương trình
-TARGET = main.c
+TARGET = main
 
 # Thư mục chứa header và source files
-HEADER_DIR = inc
-SOURCE_DIR = src
+HEADER_DIR = Header
+SOURCE_DIR = Source
 
 # Các tệp nguồn và tệp object tương ứng
 SOURCES = $(wildcard $(SOURCE_DIR)/*.c)
-OBJECTS = $(SOURCES:.c=.o)
+OBJECTS = $(SOURCES:$(SOURCE_DIR)/%.c=$(SOURCE_DIR)/%.o)
 
 # Trình biên dịch và các cờ
 CC = gcc
@@ -18,7 +18,8 @@ all: $(TARGET)
 
 # Quy tắc để tạo ra tệp thực thi
 $(TARGET): $(OBJECTS)
-	$(CC) -o $@ $^
+    @echo "Compiling $(TARGET) with objects: $(OBJECTS)"
+	$(CC) $(CFLAGS) -o $@ $^
 
 # Quy tắc để biên dịch các tệp .c thành .o
 $(SOURCE_DIR)/%.o: $(SOURCE_DIR)/%.c
@@ -28,6 +29,7 @@ $(SOURCE_DIR)/%.o: $(SOURCE_DIR)/%.c
 clean:
 	rm -f $(SOURCE_DIR)/*.o $(TARGET)
 
+# Quy tắc để chạy chương trình
 run: $(TARGET)
 	./$(TARGET)
 
