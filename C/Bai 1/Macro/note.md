@@ -12,3 +12,7 @@
 6. #undef: 
 7. #if, #elif, #else, #endif (if, else if)
 8. #ifdef, #ifndef
+
+
+## Macro functions khác gì gọi functions trực tiếp
+- Macro làm tăng size chương trình, nhưng nhanh hơn do mỗi lần gọi là một vùng địa chỉ khác nhau

@@ -76,7 +76,23 @@ typedef struct
 ## Định nghĩa:
 - Là 1 cấu trúc dữ liệu giúp liên kê nhiều kiểu dữ liệu khác nhau vào vùng nhớ.
 - Mục đích: Tiết kiệm bộ nhớ bằng cách chia sẻ cùng một vùng nhớ cho các thành viên của nó. ==> trong 1 thời điểm, chỉ một thành viên của Union có thể được sử dụng ==> Giúp tiết kiệm bộ nhớ.
+- Kích thước của nó là kích thước của member lớn nhất.
 
+```c
+typedef union test
+{
+    uint16_t arr2[2];
+    uint8_t arr1[9];
+    uint32_t arr3[2];
+}test;
+
+int main()
+{
+    printf("%d", sizeof(test));
+}
+- Ouptut:
+12
+```
 ```c
 typedef union 
 {
