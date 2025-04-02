@@ -17,7 +17,7 @@ char *ptr = "Hello world\n"; // string literal: chuỗi hằng nhưng lại nằ
 - Quyền truy cập là ĐỌC và GHI, tức là có thể ĐỌC và THAY ĐỔI GIÁ TRỊ của biến.
 - Tất cả các biến sẽ được thu hồi sau khi chương trình kết thúc.
 ```c
-const int a = 0; // vãn lưu ở vùng data - nhưng chỉ đọc không thể ghi, chứ không phải lưu ở text
+const int a = 1; // vãn lưu ở vùng data - nhưng chỉ đọc không thể ghi, chứ không phải lưu ở text
 ```
 
 ## BSS SEGMENT (uninitialized data) - Dữ liệu chưa được khởi tạo
