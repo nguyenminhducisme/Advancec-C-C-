@@ -35,6 +35,6 @@ __Polymorphism là một hành động giúp người dùng có thể thực hi�
  
 __Abstraction là nguyên lý cơ bản của OOP có tính tổng quát hóa, thường không quá chú ý đến những cái bên trong. Do đó khi sử dụng, người dùng cần chọn ra các thuộc tính và phương thức của đối tượng trong việc lập trình__.
 ```bash
-    Ví dụ: Chúng ta có thể tạo một class trừu tượng tên là UIElement để đại diện cho tất cả các thành phần trong giao diện người dùng (UI). Class này sẽ có một phương thức trừu tượng là render() để hiển thị các thành phần này.
+-Ví dụ: Chúng ta có thể tạo một class trừu tượng tên là UIElement để đại diện cho tất cả các thành phần trong giao diện người dùng (UI). Class này sẽ có một phương thức trừu tượng là render() để hiển thị các thành phần này.
 - Tại sao lại cần một phương thức trừu tượng? Bởi vì chúng ta chưa biết chính xác loại element nào sẽ được tạo ra (ví dụ: Button, Link, Image). Mỗi loại element sẽ có cách hiển thị khác nhau. Do đó, phương thức render() sẽ được định nghĩa cụ thể trong các class con kế thừa từ UIElement.
 ```
