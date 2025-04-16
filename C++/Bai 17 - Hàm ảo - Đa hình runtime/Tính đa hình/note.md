@@ -1,5 +1,5 @@
 # Tính đa hình - Polymorphism
-- có nghĩa là nhiều dạng và xảy ra khi chúng ta có nhiều class liên quan với nhay thông qua tính kế thừa
+- có nghĩa là nhiều dạng và xảy ra khi chúng ta có nhiều class liên quan với nhau thông qua tính kế thừa
 
 ```cpp
 void DoiTuong::display() 
