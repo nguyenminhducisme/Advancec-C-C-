@@ -1,0 +1,146 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Source\\Searching.c||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Source\\Searching.c||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Header\\Searching.h||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Header\\Searching.h||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Source\\main.c||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Source\\main.c||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Makefile||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Makefile||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Source\\file_handler.c||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Source\\file_handler.c||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\database.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Header\\file_handler.h||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Header\\file_handler.h||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Makefile",
+              "DocumentMoniker": "C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Makefile",
+              "RelativeDocumentMoniker": "Makefile",
+              "ToolTip": "C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Makefile",
+              "RelativeToolTip": "Makefile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-11T02:31:55.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "database.csv",
+              "DocumentMoniker": "C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\database.csv",
+              "RelativeDocumentMoniker": "database.csv",
+              "ToolTip": "C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\database.csv",
+              "RelativeToolTip": "database.csv",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
+              "WhenOpened": "2025-05-11T02:31:12.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Source\\main.c",
+              "RelativeDocumentMoniker": "Source\\main.c",
+              "ToolTip": "C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Source\\main.c",
+              "RelativeToolTip": "Source\\main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-05-09T15:59:33.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Searching.h",
+              "DocumentMoniker": "C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Header\\Searching.h",
+              "RelativeDocumentMoniker": "Header\\Searching.h",
+              "ToolTip": "C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Header\\Searching.h",
+              "RelativeToolTip": "Header\\Searching.h",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAEgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-09T15:58:36.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "file_handler.c",
+              "DocumentMoniker": "C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Source\\file_handler.c",
+              "RelativeDocumentMoniker": "Source\\file_handler.c",
+              "ToolTip": "C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Source\\file_handler.c",
+              "RelativeToolTip": "Source\\file_handler.c",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAAC0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-05-09T15:57:24.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "file_handler.h",
+              "DocumentMoniker": "C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Header\\file_handler.h",
+              "RelativeDocumentMoniker": "Header\\file_handler.h",
+              "ToolTip": "C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Header\\file_handler.h",
+              "RelativeToolTip": "Header\\file_handler.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-09T15:00:12.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Searching.c",
+              "DocumentMoniker": "C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Source\\Searching.c",
+              "RelativeDocumentMoniker": "Source\\Searching.c",
+              "ToolTip": "C:\\Users\\nguynduc\\advanceC\\C\\Bai 12\\Find_informations_in a_file\\Source\\Searching.c*",
+              "RelativeToolTip": "Source\\Searching.c*",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAE4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-05-09T14:43:04.472Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
