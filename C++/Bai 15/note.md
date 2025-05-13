@@ -1,9 +1,12 @@
 # CLASS
+
 - Để định nghĩa 1 lớp trong C++
 - Là nền tảng của OOP trong C++
 
-### Cũng giống như struct or union, nhưng có thể lưu được các kiểu định nghĩa phức tạp.
+## Cũng giống như struct or union, nhưng có thể lưu được các kiểu định nghĩa phức tạp
+
 ![alt text](image.png)
+
 ```cpp
 class Classname
 {
@@ -14,14 +17,19 @@ class Classname
 ```
 
 ## Phạm vi truy cập
+
 - Là cách quy định mức độ truy cập của các thành viên trong class
+  
 - Có 3 phạm vi truy cập chính
+
 1. public
 2. private
 3. protected
 
-## PUBLIC:
+## PUBLIC
+
 1. Có thể truy cập các biến từ bên ngoài
+
 ```cpp
 // class SinhVien
 // {
@@ -61,6 +69,7 @@ Ex1.cpp:8:9: note: declared private here
     return 0;
 }
 ```
+
 - Trong class thì biến gọi là property (thuộc tính), hàm thì được gọi là phương thức (method), còn những biến được khai báo từ class như SinhVien sv1 thì được gọi là object (đối tượng)
 
 ```cpp
@@ -201,24 +210,35 @@ Tuoi: 0
 ```
 
 ## Static property
+
 ```cpp
 static int x; // static prooperty  // 0xb4 - 0xb8
-- Không phải là vùng địa chỉ liền kề với các biến trước
 ```
+
+- Không phải là vùng địa chỉ liền kề với các biến trước
+
 1. Tất cả những object ta khai báo ra đều sử dụng chung địa chỉ của biến x này
+
 2. Phải khởi tạo những đối tượng này mới có thể sử dụng x
+
 ```cpp
 int SinhVien::x; /* phải cấp phát vùng nhớ cho biến x này */
 ```
+
 - Có thể nằm ở data hoặc bss do mình quyết định (khởi tạo có data hoặc không). Nếu đưa vào trong hàm main sẽ lỗi vì nó không nằm ở stack
 
 ## Static method
 
-1. ### Khi một method trong class được khai báo với từ khóa static:
-2. ### Method này độc lập với bất kỳ đối tượng nào của lớp.
-3. ### Method này có thể được gọi ngay cả khi không có đối tượng nào của class tồn tại.
-4. ### Method này có thể được truy cập bằng cách sử dụng tên class thông qua toán tử :: .
-5. ### Method này có thể truy cập các static property và các static method bên trong hoặc bên ngoài class.
+1. ### Khi một method trong class được khai báo với từ khóa static
+
+2. ### Method này độc lập với bất kỳ đối tượng nào của lớp
+
+3. ### Method này có thể được gọi ngay cả khi không có đối tượng nào của class tồn tại
+
+4. ### Method này có thể được truy cập bằng cách sử dụng tên class thông qua toán tử :: 
+
+5. ### Method này có thể truy cập các static property và các static method bên trong hoặc bên ngoài class
+
 ```cpp
 static void show()
     {
@@ -230,5 +250,3 @@ static void show()
         cout << "This is static method" << endl;
     }
 ```
-
-

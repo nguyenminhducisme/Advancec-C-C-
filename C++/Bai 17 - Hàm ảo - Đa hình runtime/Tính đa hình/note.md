@@ -110,10 +110,10 @@ SinhVien *sv = &sv1;
 # Hàm ảo - Virtual function
 - Là 1 hàm thành viên được khai báo trong __class cha__.
 - Khi 1 hàm là __virtual__, nó có thể ghi đè (__override__) trong class con để cung cấp cách triển khai riêng
-- Khi gọi 1 hàm ảo thông quan 1 con trỏ, hàm sẽ được quyết định dựa trên đối tượng thực tế mà con trỏ đang trỏ tới chứ không phụ thuộc vào con trỏ
+- Khi gọi 1 hàm ảo thông quan 1 con trỏ hoặc tham chiếu đến lớn con, hàm sẽ được quyết định dựa trên đối tượng thực tế mà con trỏ đang trỏ tới chứ không phụ thuộc vào con trỏ
 
 ```cpp
-- Không cần ép kiểu con trỏ nữa vì nó dựa trên thành phần nó đang quản lí
+// Không cần ép kiểu con trỏ nữa vì nó dựa trên thành phần nó đang quản lí
 
 DoiTuong *dt; 
 
@@ -148,9 +148,10 @@ class SinhVien : public DoiTuong
          void display() override;
 };
 ```
+### Giúp cho trình biên dịch hiểu mình đang định nghĩa lại 1 hàm ảo từ class cha. Hơn nữa, còn giúp ích trong việc đọc code dễ hiểu hơn.
 
 # Hàm thuần ảo - Pure virtual function
 - Là 1 __hàm ảo__ không có phần định nghĩa trong class cha, được khai báo với cú pháp = 0 và khiến class cha trở thành __class trừu tượng ( Abstract class)__, nghĩa là không thể tạo đối tượng từ class này.
 
 1. Biến 1 class thành class trìu tượng
-2. Bắt buộc những class con phải định nghĩa lại
+2. Bắt buộc những class con phải định nghĩa lại hàm thuần ảo này

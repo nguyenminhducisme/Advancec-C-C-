@@ -9,7 +9,7 @@ void print(int a)
     cout << "a = " << a << endl;
 }
 
-void print(double a)
+void print(double a, int b)
 {
     cout << "a = " << a++ << endl;
 }
@@ -33,7 +33,7 @@ int sum(double a, double b)
 int main()
 {
     TinhToan tt;
-    tt.print(5.4);
+    tt.print(5.4, 5);
     tt.print(5);
     
 

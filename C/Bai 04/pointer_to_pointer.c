@@ -25,6 +25,15 @@ int main() {
     printf("dereference ptr2 first time: %p\n", *ptr2);
 
     printf("dereference ptr2 second time: %d\n", **ptr2);
-
+/*
+Output: 
+    address of value: 000000000061FE44
+    value of ptr1: 000000000061FE44
+    address of ptr1: 000000000061FE38
+    deference ptr1: 42
+    value of ptr2: 000000000061FE38
+    dereference ptr2 first time: 000000000061FE44
+    dereference ptr2 second time: 42
+*/
     return 0;
 }

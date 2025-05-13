@@ -16,7 +16,7 @@
 
 - Mảng
 ```c
-[
+{
   {
     "name": "John Doe",
     "age": 30,
@@ -39,7 +39,7 @@
     "city": "Chicago"
   },
   20, 3.14, “Hello word”, true, null
-]
+}
 ```
 ### Trong mảng trong json, các phần tử không cần phải giống kiểu dữ liệu như mảng bình thường (int a[]...)
 ### Đối với struct 
