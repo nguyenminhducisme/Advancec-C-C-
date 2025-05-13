@@ -1,28 +1,52 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
-
-template<typename T1, typename T2>
-class Test
-{
-    private:
-        int a;
-    public:
-        void operator ()(){cout << "Test: \n";}
-        void operator ()(T1 x){cout << "Test: x = " << x << endl;}
-        void operator ()(T1 x, T2 y){cout << "Test: x = " << x << "Test y =" << y << endl;}
-};
 
 int main()
 {
-    
+    // vector<int> vec = {3, 1, 5, 9, 8};
 
-    // Cách 1: Cách gọi operator
-    Test<int, double>()();  // gọi operator không có tham số
-    Test<int, double>()(1); // gọi operator có 1 tham số
+    // sort(vec.begin(), vec.end(), [](int i, int j){return i<j;});
 
-    // Cách 2
-    Test<int, double> test;
-    test();
-    test(1);
+    // for(const auto& item : vec)
+    // {
+    //     cout << item << endl;
+    // }
+    // cout << endl;
 
+    vector<int> vec = {1,3 ,4, 6, 7, 10};
+
+    int count_odds = 0;
+    int count_even = 0;
+
+    vector<int> odds, evens;
+
+    count_if(vec.begin(), vec.end(), [&](int x)
+{
+    if(x%2 == 0)
+    {
+        count_even ++;
+        evens.push_back(x);
+    }
+    else{
+        count_odds ++;
+        odds.push_back(x);
+    }
+
+    return false;
+});
+
+
+    cout << "So luong so le la: " << count_odds << endl;
+    for(const auto& item: odds)
+    {
+        cout << item<< " ";
+    }
+    cout << endl;
+
+
+
+
+    return 0;
 }

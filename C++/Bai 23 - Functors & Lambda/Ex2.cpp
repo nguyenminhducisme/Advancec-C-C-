@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 /**
@@ -50,7 +52,7 @@ int main()
     cout <<endl;
     [&x, y, z]()
     {
-       x = 10;
+       x = 10; // được thay đổi (ghi) do ta truyền tham chiếu
         cout << x << endl;
         cout << y << endl;
         cout << z << endl;
@@ -66,7 +68,6 @@ int main()
         cout << y << endl;
         cout << z << endl;
     }();
-
 
     return 0;
 }

@@ -60,7 +60,8 @@ cout << [](int a, int b, int c)
 
 ## capture
 - Cho biết cách sử dụng các biến xung quanh lambda
-    - [<name_variable]: truyền giá trị của biến cụ thể sẽ sử dụng
+    - [<name_variable>]: truyền giá trị của biến cụ thể sẽ sử dụng ==> chỉ dùng để đọc
+    - [&<name_variable>]: truyền tham chiếu của biến cụ thể sẽ sử dụng ==> có thể đọc và ghi
     - [=]: truyền giá trị tất cả các biến xung quanh
 
 # 2. Functor
