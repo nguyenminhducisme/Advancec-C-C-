@@ -14,6 +14,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "file_handler.h"
+#include "Comparison.h"
 /**
   * @struct  Node
   * @brief   Cấu trúc của một node trong danh sách liên kết đơn.
@@ -33,7 +34,7 @@
   * @param  info   Con trỏ đến thông tin người dùng có sẵn trong database
   * @return void
   */
-//  void add_Information(Node **head, Info *info);
+ void add_Information(Node **head, Info info, int (*compare_functions_handler)(const char *, const char *));
 
   /**
   * @struct  CenterPoint
@@ -63,15 +64,21 @@
   * @return  CenterPoint*  Gốc của cây nhị phân tìm kiếm.
   */
  CenterPoint *centerPoint(Node *head);
+  /**
+  * @brief   Thực hiện tìm kiếm nhị phân trên cây BST.
+  * @details Duyệt cây nhị phân để tìm kiếm giá trị cần tìm.
+  * @param   root   Gốc của cây nhị phân.
+  * @param   info  Giá trị cần tìm.
+  * @return  CenterPoint*   Trả về con trỏ đến node tìm thấy, NULL nếu không tìm thấy.
+  */
+  CenterPoint *binarySearch(CenterPoint *root, Info info);
 
-//   /**
-//   * @brief   In danh sách liên kết.
-//   * @details Duyệt danh sách liên kết và in ra từng phần tử.
-//   * @param   head  Con trỏ đến danh sách liên kết.
-//   * @return  void
-//   */
-//  void print_list(Node *head);
-void add_Information( Info info);
+  /**
+  * @brief   In danh sách liên kết.
+  * @details Duyệt danh sách liên kết và in ra từng phần tử.
+  * @param   new_info  Con trỏ đến danh sách liên kết.
+  * @return void
+  */
 static void print_list(Node *new_info);
 // void Execute_memory(Node *new_info);
 static void free_list(Node *new_info);

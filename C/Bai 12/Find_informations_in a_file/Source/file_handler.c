@@ -24,7 +24,7 @@ void open_file()
     {
         char *token = NULL;
         Info info;
-
+        Node *head = NULL;
         
 
         token = strtok(line, ",");
@@ -53,7 +53,7 @@ void open_file()
        //printf("%s %d %s %s\n",info->name,info->age,info->address, info->phone);
         //add_Information(&head, info);     
         //print_list(head);
-        add_Information(info);
+        add_Information(&head, info);
         
         free(info.name);
         free(info.phone);

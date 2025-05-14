@@ -60,26 +60,28 @@ cout << [](int a, int b, int c)
 
 ## capture
 - Cho biết cách sử dụng các biến xung quanh lambda
-    - [<name_variable>]: truyền giá trị của biến cụ thể sẽ sử dụng ==> chỉ dùng để đọc
-    - [&<name_variable>]: truyền tham chiếu của biến cụ thể sẽ sử dụng ==> có thể đọc và ghi
-    - [=]: truyền giá trị tất cả các biến xung quanh
+    - [__<name_variable>__]: truyền giá trị của biến cụ thể sẽ sử dụng ==> chỉ dùng để đọc
+    - [__&<name_variable>__]: truyền tham chiếu của biến cụ thể sẽ sử dụng ==> có thể đọc và ghi
+    - [__=__]: truyền giá trị tất cả các biến xung quanh
+    - [__&__]: truyền tham chiếu tất cả các biến xung quanh
 
 # 2. Functor
 
-- Trong C+, Functor (Đối tượng hàm - functor object) là 1 object có thể hoạt động như một hàm. Nói cách khác, functor là một đối tượng của class(struct) có định nghĩa toán tử __operator()__ để có thể gọi ra như một hàm thông thường.
+- Trong C+, __Functor__ (Đối tượng hàm - functor object) _là 1 object có thể hoạt động như một hàm_. Nói cách khác, functor là một đối tượng của class(struct) có định nghĩa toán tử __operator()__ để có thể gọi ra như một hàm thông thường.
 
 ```cpp
 template<typename T1, typename T2>
 class Test
 {
     public:
-        void operator ()(){}
+        void operator ()(){} // Định nghĩa lại toán tử ()
         void operator ()(T1 x){}
-        void operator ()(T1 x. T2 y){}
+        void operator ()(T1 x, T2 y){}
 };
 ```
 
-- Đặc điểm của Functor:
+### Đặc điểm của Functor:
  - Là hàm thành viên có quyền truy cập là public.
  - Không phải là static method.
+    - Vì functor là 1 đối tượng gọi operator ra, còn static method có thể gọi trực tiếp từ class ra
  - Có khai báo operator ().

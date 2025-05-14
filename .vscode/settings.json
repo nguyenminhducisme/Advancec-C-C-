@@ -112,7 +112,8 @@
     "file_handler.h": "c",
     "search.h": "c",
     "searching.h": "c",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "comparison.h": "c"
   },
   "cmake.sourceDirectory": "C:/Users/nguynduc/advanceC/Bai 9/Stack"
 }

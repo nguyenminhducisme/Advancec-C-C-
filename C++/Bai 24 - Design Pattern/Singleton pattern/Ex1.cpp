@@ -22,10 +22,10 @@ class GPIO
 
       static  GPIO *gpio;
 
-      ~ GPIO(){ // Hàm hủy không thể tác động tới biến static
-        delete gpio;    
-        cout << "Destructor\n";
-      }
+    //   ~ GPIO(){ // Hàm hủy không thể tác động tới biến static
+    //     delete gpio;    
+    //     cout << "Destructor\n";
+    // }
       
     public:
         static GPIO* createObject() // Để khởi tạo trực tiếp từ class

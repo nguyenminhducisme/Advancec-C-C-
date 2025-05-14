@@ -9,9 +9,9 @@
   - Logic xử lý và giao diện người dùng (UI) bị trộn lẫn
 
 - Design Patterns thường được chia thành các loại sau:
-  - Creation patterns (mẫu khởi tạo): quản lý việc khởi tạo đối tượng (VD: __Singleton, Factory__)
-  - Structural Patterns (Mẫu cấu trúc): Tổ chức cấu trúc của các lớp và đối tượng (VD: __Decorator__, Adapter, Composite)
-  - Behavioral Patterns (Mẫu hành vi): Xác định cách các đối tượng tương tác với nhau (VD: __Observer, MPC__)
+  - _Creation patterns_ (mẫu khởi tạo): quản lý việc khởi tạo đối tượng (VD: __Singleton, Factory__)
+  - _Structural Patterns_ (Mẫu cấu trúc): Tổ chức cấu trúc của các lớp và đối tượng (VD: __Decorator__, __Adapter__, __Composite__)
+  - _Behavioral Patterns_ (Mẫu hành vi): Xác định cách các đối tượng tương tác với nhau (VD: __Observer, MPC__, __Strategy__)
 
 ## SINGLETON PATTERN
 
@@ -77,7 +77,19 @@ int main()
 }
 ```
 
+### Các thành phần chính của Singleton
+
+- Private constructor:
+  - Đảm bảo rằng không ai có thể khởi tạo đối tượng từ bên ngoài class
+- Static Instance:
+  - Đối tượng tĩnh duy nhất của class
+  - Không thể tạo ra nhiều hơn một đối tượng của class Singleton
+- Static method
+  - Phương thức để truy cập đến đối tượng duy nhất từ mọi nơi trong chương trình
+
 ### Ưu điểm
+
+- 
 
 ### Nhược điểm
 

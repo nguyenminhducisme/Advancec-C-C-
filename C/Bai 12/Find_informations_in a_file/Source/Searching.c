@@ -1,29 +1,45 @@
 #include "C:\Users\nguynduc\advanceC\C\Bai 12\Find_informations_in a_file\Header\Searching.h"
-// void add_Information(Node **head, Info *info)
-// {
-//     Node *new_info = (Node *)malloc(sizeof(Node));
-//     new_info->User_Information->address = info->address;
-//     new_info->User_Information->name = info->name;
-//     new_info->User_Information->age = info->age;
-//     new_info->User_Information->phone = info->phone;
-//     new_info->next = NULL;
 
-//     if(*head == NULL || (*head)->User_Information->name > info->name)
-//     {
-//         new_info->next = *head;
-//         *head = new_info;
-//         return;
-//     }
 
-//     Node *current_info = *head;
-//     while(current_info->next != NULL && current_info->next->User_Information->name < info->name)
-//     {
-//         current_info = current_info->next;
-//     }
 
-//     new_info->next = current_info->next;
-//     current_info->next = new_info;
-// }
+
+void add_Information(Node **head, Info info, int (*compare_functions_handler)(const char *, const char *))
+{
+    Node *new_info = (Node *)malloc(sizeof(Node));
+    new_info->User_Information.name = (char *)malloc(strlen(info.name)+1);
+    new_info->User_Information.address = (char *)malloc(strlen(info.address)+1);
+    new_info->User_Information.phone = (char *)malloc(strlen(info.phone)+1);
+    new_info->next = NULL;
+    
+    
+    strcpy(new_info->User_Information.name, info.name);
+    new_info->User_Information.age = info.age;
+    strcpy(new_info->User_Information.address, info.address);
+    strcpy(new_info->User_Information.phone, info.phone);
+
+
+    if(*head == NULL || compare_functions_handler > 0 )
+    {
+        new_info->next = head;
+        *head = new_info;
+    }
+
+    Node *current_info = *head;
+
+    
+
+    while (current_info->next != NULL && compare_by_name_or_phone(current_info->next->User_Information.name, info.name)<0)
+    {
+        current_info = current_info->next;
+    }
+
+    new_info->next = current_info->next;
+    current_info->next = new_info;
+    // print_list(new_info);
+    // free_list(new_info);
+   
+
+}
 
 CenterPoint *buildTree(Node *head, int start, int end)
 {
@@ -63,19 +79,41 @@ CenterPoint *centerPoint(Node *head)
      return buildTree(head, 0, length - 1);
  }
 
-//  void print_list(Node *head)
-//  {
-//      while (head != NULL)
-//      {
-//          printf("%s ", head->User_Information->name);
-//          printf("%d ", head->User_Information->age);
-//          printf("%s ", head->User_Information->address);
-//          printf("%s ", head->User_Information->phone);
-//          printf("\n");
-//          head = head->next;
-//      }
-//      printf("\n");
-//  }
+
+
+
+ CenterPoint *binarySearch(CenterPoint *root, Info info)
+ {
+     static int loop = 0;
+     loop++;
+     printf("Số lần lặp: %d\n", loop);
+ 
+     if (root == NULL) return NULL;
+ 
+     if (root->User_Information->address == info.address)
+     {
+         return root;
+     }
+     else if (compare_by_name_or_phone(info.address, root->User_Information->address))
+     {
+         return binarySearch(root->left, (Info) info.address);
+     }
+     else
+     {
+         return binarySearch(root->right, value);
+     }
+ }
+
+
+static void print_list(Node *new_info)
+{
+    while(new_info != NULL)
+    {
+        printf("%s %d %s %s\n", new_info->User_Information.name, new_info->User_Information.age, new_info->User_Information.address, new_info->User_Information.phone);
+        new_info = new_info->next;
+    }
+    printf("\n");
+}
 
 static void free_list(Node *new_info)
 {
@@ -85,31 +123,3 @@ static void free_list(Node *new_info)
     free(new_info);
     new_info = NULL;
 }
-
-void add_Information(Info info)
-{
-    Node *new_info = (Node *)malloc(sizeof(Node));
-    new_info->User_Information.name = (char *)malloc(strlen(info.name)+1);
-    new_info->User_Information.address = (char *)malloc(strlen(info.address)+1);
-    new_info->User_Information.phone = (char *)malloc(strlen(info.phone)+1);
-    
-
-    strcpy(new_info->User_Information.name, info.name);
-    new_info->User_Information.age = info.age;
-    strcpy(new_info->User_Information.address, info.address);
-    strcpy(new_info->User_Information.phone, info.phone);
-    print_list(new_info);
-    free_list(new_info);
-   
-
-}
-
-static void print_list(Node *new_info)
-{
-    printf("%s %d %s %s\n", new_info->User_Information.name, new_info->User_Information.age, new_info->User_Information.address, new_info->User_Information.phone);
-}
-
-// void Execute_memory(Node *new_info)
-// {
-    
-// }
