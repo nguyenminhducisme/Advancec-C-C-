@@ -15,16 +15,7 @@
 #include <stdlib.h>
 #include "file_handler.h"
 #include "Comparison.h"
-/**
-  * @struct  Node
-  * @brief   Cấu trúc của một node trong danh sách liên kết đơn.
-  */
- typedef struct Node
- {
-    Info User_Information; /**< Con trỏ Info để lưu trữ thông tin users */
-    struct Node *next; /**< Con trỏ đến node tiếp theo */
- } Node;
- 
+#include "typedef.h"
 
  /* ========================================[ FUNCTION INPLEMENTATION ]======================================*/
  

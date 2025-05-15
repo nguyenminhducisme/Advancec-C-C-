@@ -21,19 +21,13 @@
 /*========================================[TYPES DEFINITIONS]========================================*/
 #define FILE_PATH "database.csv"
 #define MAXIMUM_LINE 100
-typedef struct Info
-{
-    char *name;
-    int age;
-    char *phone;
-    char *address;
-}Info;
+#include "typedef.h"
 /*========================================[FILES INCLUDED]========================================*/
-#include "Searching.h"
+#include "C:\Users\nguynduc\advanceC\C\Bai 12\Find_informations_in a_file\Header\Searching.h"
 /* ========================================[ FUNCTION INPLEMENTATION ]======================================*/
 /**
  * @brief  Đọc file và in ra dữ liệu trong file
  * @return void
  */
-void open_file();
+void open_file(Node **head);
 #endif // FILE_HANDLER_H

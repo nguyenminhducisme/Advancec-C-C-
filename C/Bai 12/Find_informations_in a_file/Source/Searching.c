@@ -1,12 +1,6 @@
 #include "C:\Users\nguynduc\advanceC\C\Bai 12\Find_informations_in a_file\Header\Searching.h"
 
 
-/**
- * @brief Con trỏ hàm để quản lý trong việc so sánh sđt hay là tên
- * @return int
- */
-int (*compare_function)(const void *, const void *) = NULL;
-
 
 void add_Information(Node **head, Info info)
 {
@@ -23,7 +17,7 @@ void add_Information(Node **head, Info info)
     strcpy(new_info->User_Information.phone, info.phone);
 
 
-    if(*head == NULL || compare_function(&(*head)->User_Information, &info) > 0 )
+    if(*head == NULL || compare_by_name(&(*head)->User_Information.name, &info.name) > 0 )
     {
         new_info->next = *head;
         *head = new_info;
@@ -33,7 +27,7 @@ void add_Information(Node **head, Info info)
 
     
 
-    while (current_info->next != NULL && compare_function(current_info->next->User_Information.name, info.name)<0)
+    while (current_info->next != NULL && compare_by_name(current_info->next->User_Information.name, info.name)<0)
     {
         current_info = current_info->next;
     }
@@ -95,11 +89,11 @@ CenterPoint *centerPoint(Node *head)
  
      if (root == NULL) return NULL;
  
-     if (compare_function(root->User_Information, &info) == 0)
+     if (compare_by_name(root->User_Information->name, &info.name) == 0)
      {
          return root;
      }
-     else if (compare_function(&info, root->User_Information->address))
+     else if (compare_by_name(&info.name, root->User_Information->name)>0)
      {
          return binarySearch(root->left, info);
      }
