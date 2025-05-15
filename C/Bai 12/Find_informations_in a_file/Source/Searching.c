@@ -1,11 +1,7 @@
 #include "C:\Users\nguynduc\advanceC\C\Bai 12\Find_informations_in a_file\Header\Searching.h"
 
 
-/**
- * @brief Con trỏ hàm để quản lý trong việc so sánh sđt hay là tên
- * @return int
- */
-int (*compare_function)(const void *, const void *) = NULL;
+
 
 
 void add_Information(Node **head, Info info)
@@ -99,7 +95,7 @@ CenterPoint *centerPoint(Node *head)
      {
          return root;
      }
-     else if (compare_function(&info, root->User_Information->address))
+     else if (compare_function(&info, root->User_Information->address)>0)
      {
          return binarySearch(root->left, info);
      }

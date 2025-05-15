@@ -2,7 +2,7 @@
 
 
 
-void open_file()
+void open_file(Node **head)
 {
     char line[MAXIMUM_LINE];
 
@@ -12,7 +12,7 @@ void open_file()
 
     if(file == NULL)
     {
-        perror("FAIL TO OPEN FILE\n");
+        printf("FAIL TO OPEN FILE\n");
         return;
     }
 
@@ -24,7 +24,6 @@ void open_file()
     {
         char *token = NULL;
         Info info;
-        Node *head = NULL;
         
 
         token = strtok(line, ",");
@@ -53,11 +52,12 @@ void open_file()
        //printf("%s %d %s %s\n",info->name,info->age,info->address, info->phone);
         //add_Information(&head, info);     
         //print_list(head);
-        add_Information(&head, info);
+        add_Information(head, info);
         
         free(info.name);
         free(info.phone);
         free(info.address);
+        
     }
 
     fclose(file);

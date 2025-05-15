@@ -29,11 +29,11 @@ typedef struct Info
     char *address;
 }Info;
 /*========================================[FILES INCLUDED]========================================*/
-#include "Searching.h"
+#include "C:\Users\nguynduc\advanceC\C\Bai 12\Find_informations_in a_file\Header\Searching.h"
 /* ========================================[ FUNCTION INPLEMENTATION ]======================================*/
 /**
  * @brief  Đọc file và in ra dữ liệu trong file
  * @return void
  */
-void open_file();
+void open_file(Node **head);
 #endif // FILE_HANDLER_H

@@ -25,7 +25,11 @@
     struct Node *next; /**< Con trỏ đến node tiếp theo */
  } Node;
  
-
+/**
+ * @brief Con trỏ hàm để quản lý trong việc so sánh sđt hay là tên
+ * @return int
+ */
+int (*compare_function)(const void *, const void *) = NULL;
  /* ========================================[ FUNCTION INPLEMENTATION ]======================================*/
  
  /**

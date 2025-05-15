@@ -13,14 +13,26 @@
 
 int main()
 {
+    Info user = {
+        .name = "John Doe",
+        .age = 30,
+        .address = "123 Main St",
+        .phone = "555-1234"
+     };
     Node *head = NULL;
-    open_file();
+
+    compare_function = compare_by_name;
+
+    open_file(&head);
 
     print_list(head);
 
+
     CenterPoint *ptr = centerPoint(head);
 
-    CenterPoint *result = binarySearch(ptr, "Jone Doe");
+    
+
+    CenterPoint *result = binarySearch(ptr, user);
     if(result != NULL)
     {
         printf( "Found informations\n");
