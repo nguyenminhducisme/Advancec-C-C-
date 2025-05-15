@@ -13,7 +13,8 @@
 /*========================================[FILES INCLUDED]========================================*/
 #include <stdio.h>
 #include <string.h>
-
+#include "Searching.h"
+#include "file_handler.h"
 /* ========================================[ FUNCTION INPLEMENTATION ]======================================*/
 /**
  * @brief Dùng để so sánh giữa 2 thông tin 
@@ -22,17 +23,23 @@
  * @return int
  */
 int stringCompare(const char *str1, const char *str2);
+
 /**
- * @brief Dùng để so sánh sđt hoặc tên
+ * @brief Dùng để so sánh tên
  * @param str1
  * @param str2
  * @return int
  */
-int compare_by_name_or_phone(const char *str1, const char *str2);
+int compare_by_name(const void *str1, const void *str2);
+
 /**
- * @brief Con trỏ hàm để quản lý trong việc so sánh sđt hay là tên
+ * @brief Dùng để so sánh tên
+ * @param str1
+ * @param str2
  * @return int
  */
+int compare_by_phone(const void *str1, const void *str2);
+
 
 
 #endif // COMPARISON_H

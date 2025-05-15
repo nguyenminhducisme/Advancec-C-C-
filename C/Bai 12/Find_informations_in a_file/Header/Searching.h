@@ -34,7 +34,7 @@
   * @param  info   Con trỏ đến thông tin người dùng có sẵn trong database
   * @return void
   */
- void add_Information(Node **head, Info info, int (*compare_functions_handler)(const char *, const char *));
+ void add_Information(Node **head, Info info);
 
   /**
   * @struct  CenterPoint
@@ -79,7 +79,7 @@
   * @param   new_info  Con trỏ đến danh sách liên kết.
   * @return void
   */
-static void print_list(Node *new_info);
+void print_list(Node *new_info);
 // void Execute_memory(Node *new_info);
-static void free_list(Node *new_info);
+void free_list(Node *new_info);
 #endif // SEARCHING_H

@@ -1,9 +1,14 @@
 #include "C:\Users\nguynduc\advanceC\C\Bai 12\Find_informations_in a_file\Header\Searching.h"
 
 
+/**
+ * @brief Con trỏ hàm để quản lý trong việc so sánh sđt hay là tên
+ * @return int
+ */
+int (*compare_function)(const void *, const void *) = NULL;
 
 
-void add_Information(Node **head, Info info, int (*compare_functions_handler)(const char *, const char *))
+void add_Information(Node **head, Info info)
 {
     Node *new_info = (Node *)malloc(sizeof(Node));
     new_info->User_Information.name = (char *)malloc(strlen(info.name)+1);
@@ -18,9 +23,9 @@ void add_Information(Node **head, Info info, int (*compare_functions_handler)(co
     strcpy(new_info->User_Information.phone, info.phone);
 
 
-    if(*head == NULL || compare_functions_handler > 0 )
+    if(*head == NULL || compare_function(&(*head)->User_Information, &info) > 0 )
     {
-        new_info->next = head;
+        new_info->next = *head;
         *head = new_info;
     }
 
@@ -28,7 +33,7 @@ void add_Information(Node **head, Info info, int (*compare_functions_handler)(co
 
     
 
-    while (current_info->next != NULL && compare_by_name_or_phone(current_info->next->User_Information.name, info.name)<0)
+    while (current_info->next != NULL && compare_function(current_info->next->User_Information.name, info.name)<0)
     {
         current_info = current_info->next;
     }
@@ -86,26 +91,26 @@ CenterPoint *centerPoint(Node *head)
  {
      static int loop = 0;
      loop++;
-     printf("Số lần lặp: %d\n", loop);
+     printf("So lan lap: %d\n", loop);
  
      if (root == NULL) return NULL;
  
-     if (root->User_Information->address == info.address)
+     if (compare_function(root->User_Information, &info) == 0)
      {
          return root;
      }
-     else if (compare_by_name_or_phone(info.address, root->User_Information->address))
+     else if (compare_function(&info, root->User_Information->address))
      {
-         return binarySearch(root->left, (Info) info.address);
+         return binarySearch(root->left, info);
      }
      else
      {
-         return binarySearch(root->right, value);
+         return binarySearch(root->right, info);
      }
  }
 
 
-static void print_list(Node *new_info)
+void print_list(Node *new_info)
 {
     while(new_info != NULL)
     {
@@ -115,7 +120,7 @@ static void print_list(Node *new_info)
     printf("\n");
 }
 
-static void free_list(Node *new_info)
+ void free_list(Node *new_info)
 {
     free(new_info->User_Information.address);
     free(new_info->User_Information.name);
