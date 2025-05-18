@@ -40,8 +40,8 @@ int main()
     MyClass<int, double, char> obj(1, 2.5, 'A'); // Khởi tạo obj với 3 đối số với 3 kiểu dữ liệu khác nhau
     obj.display();  // Kết quả: 1 2.5 A
 
-    MyClass obj1;
-    obj1.display();
+    MyClass obj1; // Khởi tạo đối tượng obj thuộc MyClass không có đối số
+    obj1.display(); // Gọi hàm display() ở Myclass không có đối số chỉ in ra "No arguments"
     return 0;
 }
 
