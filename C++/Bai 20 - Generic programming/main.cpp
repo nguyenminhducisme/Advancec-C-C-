@@ -38,7 +38,7 @@ class MyClass<T, Args...> : public MyClass<Args...> // kế thừa từ lớp pu
 int main()
 {
     MyClass<int, double, char> obj(1, 2.5, 'A'); // Khởi tạo obj với 3 đối số với 3 kiểu dữ liệu khác nhau
-    obj.display();  // Kết quả: 1 2.5 A
+    obj.display();  // Gọi hàm display() ở Myclass có ít nhất 1 đối số
 
     MyClass obj1; // Khởi tạo đối tượng obj thuộc MyClass không có đối số
     obj1.display(); // Gọi hàm display() ở Myclass không có đối số chỉ in ra "No arguments"
