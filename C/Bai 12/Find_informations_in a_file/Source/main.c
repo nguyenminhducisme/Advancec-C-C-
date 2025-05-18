@@ -22,6 +22,9 @@ int main()
     Node *head = NULL;
 
 
+    compare_function = compare_by_name;
+
+
     open_file(&head);
 
     print_list(head);

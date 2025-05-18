@@ -2,6 +2,7 @@
 
 
 
+
 void add_Information(Node **head, Info info)
 {
     Node *new_info = (Node *)malloc(sizeof(Node));
@@ -93,7 +94,9 @@ CenterPoint *centerPoint(Node *head)
      {
          return root;
      }
-     else if (compare_by_name(&info.name, root->User_Information->name)>0)
+
+     else if (compare_function(&info, root->User_Information->address)>0)
+
      {
          return binarySearch(root->left, info);
      }

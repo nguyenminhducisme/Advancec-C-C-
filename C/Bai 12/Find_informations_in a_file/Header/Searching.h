@@ -15,8 +15,26 @@
 #include <stdlib.h>
 #include "file_handler.h"
 #include "Comparison.h"
+
 #include "typedef.h"
 
+=======
+/**
+  * @struct  Node
+  * @brief   Cấu trúc của một node trong danh sách liên kết đơn.
+  */
+ typedef struct Node
+ {
+    Info User_Information; /**< Con trỏ Info để lưu trữ thông tin users */
+    struct Node *next; /**< Con trỏ đến node tiếp theo */
+ } Node;
+ 
+/**
+ * @brief Con trỏ hàm để quản lý trong việc so sánh sđt hay là tên
+ * @return int
+ */
+int (*compare_function)(const void *, const void *) = NULL;
+5a436a2e041dda7120dcc5e408324802b1fc13
  /* ========================================[ FUNCTION INPLEMENTATION ]======================================*/
  
  /**

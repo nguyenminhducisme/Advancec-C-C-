@@ -142,3 +142,9 @@ class name_of_class<data_type>
 - Variadic Template cho phép bạn tạo các hàm template hoặc lớp template có thể nhận một số lượng tham số không xác định. 
 
 - Điều này giúp bạn viết mã linh hoạt hơn khi làm việc với danh sách tham số có kích thước động.
+
+- Syntax
+```cpp
+template(typename arg, typename... args)
+return_type function_name(arg var1, args... var2)
+```
