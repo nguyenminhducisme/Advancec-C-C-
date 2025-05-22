@@ -24,3 +24,16 @@
 | 22  | `fail()`          | `if (file.fail())`                     | Kiểm tra thao tác thất bại (mở file, đọc sai kiểu...) |
 | 23  | `good()`          | `if (file.good())`                     | Kiểm tra trạng thái tốt                               |
 | 24  | `clear()`         | `file.clear();`                        | Xóa cờ lỗi (sau khi đọc/ghi lỗi)                      |
+
+
+
+## 📌 Các cờ phổ biến của ios
+
+| Cờ (`std::ios::...`) | Ý nghĩa                                                  |
+| -------------------- | -------------------------------------------------------- |
+| `in`                 | Mở file để **đọc**                                       |
+| `out`                | Mở file để **ghi**                                       |
+| `app`                | Ghi **thêm vào cuối** file (append)                      |
+| `trunc`              | **Xóa sạch** nội dung file cũ nếu file đã tồn tại        |
+| `binary`             | Mở file ở **chế độ nhị phân** (thay vì văn bản mặc định) |
+| `ate`                | Di chuyển con trỏ đến **cuối file ngay khi mở**          |
