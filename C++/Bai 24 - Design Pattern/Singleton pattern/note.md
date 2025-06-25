@@ -23,13 +23,12 @@
 - Singleton thường sử dụng cho những hệ thống chỉ cần một phiên bản duy nhất như: kết nối cơ sở dữ liệu, bộ nhớ đệm (cache), logger để ghi log, hoặc cấu hình hệ thống.
 
 ### Ví dụ triển khai
-
 ```cpp
 #include <iostream>
 using namespace std;
 
 /*
-* private constrcutor: Để đảm bảo không thể khởi tạo từ bên ngoài class
+* private constructor: Để đảm bảo không thể khởi tạo từ bên ngoài class
 * con trỏ static: trỏ tới đối tượng duy nhất này
 * hàm static: tạo đối tượng
 */
