@@ -51,7 +51,7 @@ cout << [](int a, int b, int c)
         double arr[] = {args...};
         for(int i = 0; i<(sizeof(arr)/sizeof(arr[0])); i++)
         {
-            sum = sum+ arr[i];
+            sum = sum + arr[i];
         }
         return sum;
     }(1, 2, 3, 3.5) << endl;
