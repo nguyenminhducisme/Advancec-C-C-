@@ -1,46 +1,41 @@
-# Tên file thực thi
+#Tên file thực thi
 TARGET = main
 
-# Thư mục chứa file header, file nguồn và file thực thi
-INCDIR = inc
+#Tên các tệp
+
 SRCDIR = src
+INCDIR = inc
 BINDIR = bin
 
-# Tìm tất cả các file nguồn .cpp trong thư mục SRCDIR
+#Tìm tất cả các file nguồn trong thư mục src
 SRCS = $(wildcard $(SRCDIR)/*.cpp)
 
-# Tạo danh sách các file object .o tương ứng trong thư mục BINDIR
-OBJS = $(SRCS:$(SRCDIR)/%.cpp=$(BINDIR)/%.o)
+#Biên dịch thành file.o cho vào thư mục bin
+OBJS = $(patsubst $(SRCDIR)/%.cpp, $(BINDIR)/%.o, $(SRCS))
 
-# Compiler và các flags cho compiler
+# Trình biên dịch
 CXX = g++
-CXXFLAGS = -Wall -std=c++11 -I$(INCDIR)
+CXXFLAGS = -Wall -Wextra -std=c++17 -I$(INCDIR)
 
-# cở debug
-# CXXFLAGS = -std=c++11 -g -Wall -Wextra
+#lệnh all để build chương trình
+all: $(TARGET)
 
-# cờ mã hóa sang ký tự có dấu
-# CXXFLAGS = -std=c++11 -Wall -Wextra -finput-charset=UTF-8 -fexec-charset=UTF-8
-
-# Rule mặc định để biên dịch chương trình
-all: $(BINDIR)/$(TARGET)
-
-# Tạo thư mục bin nếu chưa tồn tại
+#Tạo thư mục bin nếu chưa tồn tại
 $(BINDIR):
-	mkdir -p $(BINDIR)
+	@echo "Tạo thư mục bin"
+	@mkdir -p $(BINDIR)
 
-# Rule để tạo file thực thi trong thư mục bin
-$(BINDIR)/$(TARGET): $(OBJS) | $(BINDIR)
-	$(CXX) $(CXXFLAGS) -o $(BINDIR)/$(TARGET) $(OBJS)
-
-# Rule để tạo các file object (.o) trong thư mục bin từ file source (.cpp)
+# Rule biên dịch từng file .cpp thành .o trong bin
 $(BINDIR)/%.o: $(SRCDIR)/%.cpp | $(BINDIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# Rule để dọn dẹp các file biên dịch
-clean:
+#clean
+clean: 
 	rm -f $(BINDIR)/*.o $(BINDIR)/$(TARGET)
+#run
+run: $(TARGET)
+	./$(TARGET)
 
-# Rule để chạy chương trình từ thư mục bin
-run: all
-	./$(BINDIR)/$(TARGET)
+
+
+
